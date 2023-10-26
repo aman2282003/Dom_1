@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name" placeholder ="Enter you name">
+	<select id="gender">
+		<option value="gen">Gender</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder ="Enter you email">
+	<input type="text" name="mobile" id="mobile" placeholder ="Enter you Mobile.no">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script >
+		function showName() {
+		let nam = document.getElementById("name").value;
+        let key =document.getElementById("dName") 
+		key.innerText=` NAME : ${nam}`	
+	}
+
+		function showGender() {
+			let gen = document.getElementById("gender").value;
+        let key1 =document.getElementById("dGender") 
+		key1.innerText=`GENDER : ${gen}`
+
+		}
+
+		function showEmail() {
+			let em = document.getElementById("email").value;
+        let key11 =document.getElementById("dEmail") 
+		key11.innerText=`Email: ${em}`
+		}
+
+		function showMobile() {
+			let mb = document.getElementById("mobile").value;
+        let key111 =document.getElementById("dMobile") 
+		key111.innerText=`Mobile: ${mb}`
+		}
+
+		function resetForm() {
+			let key=document.getElementById("name")
+			key.value=""
+
+			let key1=document.getElementById("gender")
+			key1.value=""
+
+			let key11=document.getElementById("email")
+			key11.value=""
+		
+			let key111=document.getElementById("mobile")
+			key111.value=""
+
+		}
+
+		function resetDisplay() {
+			let fast1=document.getElementById("dName")
+			fast1.innerText=` NAME ${""}`
+
+			let second1=document.getElementById("dGender")
+			second1.innerText=`GENDER ${""}`
+
+			let thard1=document.getElementById("dEmail")
+			thard1.innerText=`EMAIL ${""}`
+			
+			let forth1=document.getElementById("dMobile")
+			forth1.innerText=`MOBILE ${""}`
+
+		}
+	</script>
+</body>
+</html>
